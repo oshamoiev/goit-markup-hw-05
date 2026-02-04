@@ -643,11 +643,8 @@ img {
 
 .privacy-policy-checkbox:checked + .privacy-policy-label .checkbox-span {
     background-color: #404bbf;
-    border: none;
-}
-
-.privacy-policy-checkbox:checked + .privacy-policy-label .checkbox-icon {
     fill: #F4F4FD;
+    border: none;
 }
 
 .privacy-policy-link {
