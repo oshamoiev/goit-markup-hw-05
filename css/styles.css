@@ -542,6 +542,7 @@ img {
 
 .form-field {
     position: relative;
+    margin-bottom: 8px;
 }
 
 .form-field-label {
@@ -570,22 +571,7 @@ img {
 }
 
 .form-input:focus {
-    border-color: #4D5AE5;;
-}
-
-.form-input.textarea {
-    resize: none;
-    height: 120px;
-    padding-top: 8px;
-    padding-left: 16px;
-}
-
-.form-input.textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+    border-color: #4D5AE5;
 }
 
 .form-input-icon {
@@ -593,6 +579,33 @@ img {
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.form-input:focus + .form-input-icon {
+    fill: #4D5AE5;
+}
+
+.form-field-textarea {
+    margin-bottom: 16px;
+}
+
+.textarea {
+    resize: none;
+    height: 120px;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
 }
 
 .checkbox-field {
@@ -616,13 +629,12 @@ img {
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-
     margin-right: 8px;
     background-color: transparent;
-
     align-items: center;
     justify-content: center;
-    color: #fff; /* для svg через currentColor */
+    color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-span {
@@ -630,12 +642,12 @@ img {
 }
 
 .privacy-policy-checkbox:checked + .privacy-policy-label .checkbox-span {
-    background-color: #4d5ae5;
+    background-color: #404bbf;
     border: none;
 }
 
 .privacy-policy-checkbox:checked + .privacy-policy-label .checkbox-icon {
-    fill: #fff;
+    fill: #F4F4FD;
 }
 
 .privacy-policy-link {
