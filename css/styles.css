@@ -497,4 +497,27 @@ img {
     transform: translate(-50%, -50%) scale(1.5);
 }
 
+.modal-close-button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(0 0 0 / 0.1) solid 1px;
+    background-color: #e7e9fc;;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.modal-close-button:hover, .modal-close-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-button:hover .close-icon, .modal-close-button:focus .close-icon {
+    fill: #fff;
+}
 
