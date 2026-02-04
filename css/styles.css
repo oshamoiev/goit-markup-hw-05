@@ -540,7 +540,11 @@ img {
     gap: 8px;
 }
 
-.form-label {
+.form-field {
+    position: relative;
+}
+
+.form-field-label {
     display: block;
     font-weight: 400;
     font-size: 12px;
@@ -550,7 +554,7 @@ img {
     margin-bottom: 4px;
 }
 
-.form-field {
+.form-input-wrapper {
     position: relative;
 }
 
@@ -560,6 +564,13 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding-left: 38px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: #4D5AE5;;
 }
 
 .form-input.textarea {
@@ -579,13 +590,9 @@ img {
 
 .form-input-icon {
     position: absolute;
-    top: 38px;
+    top: 50%;
     left: 16px;
     transform: translateY(-50%);
-}
-
-.form-input:focus {
-    border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 .checkbox-field {
